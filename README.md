@@ -1,6 +1,21 @@
 # otel-demo-tests-10
 
-Black-box pytest tests for the [OpenTelemetry demo](https://github.com/open-telemetry/opentelemetry-demo) frontend API. Part 10 of 10; 400 tests.
+Black-box pytest tests for one area of the [OpenTelemetry demo](https://github.com/open-telemetry/opentelemetry-demo) frontend API: **ads**, GET /api/data, ads for a category. 400 tests.
+
+This repo owns the ads area. Tests for a change to it belong here, and tests for any other area belong in that area's repo:
+
+| Repo | Area | Covers |
+|---|---|---|
+| `otel-demo-tests-01` | currency | GET /api/currency, the supported currencies |
+| `otel-demo-tests-02` | product-list | GET /api/products, the catalog in a currency |
+| `otel-demo-tests-03` | product-detail | GET /api/products/{id}, one product in a currency |
+| `otel-demo-tests-04` | cart | POST, GET and DELETE /api/cart, the cart's contents |
+| `otel-demo-tests-05` | cart-pricing | GET /api/cart?currencyCode=, cart prices in a currency |
+| `otel-demo-tests-06` | shipping | GET /api/shipping, shipping quotes |
+| `otel-demo-tests-07` | checkout | POST /api/checkout, placing orders |
+| `otel-demo-tests-08` | payment | POST /api/checkout with a card the payment service declines |
+| `otel-demo-tests-09` | recommendations | GET /api/recommendations, related products |
+| `otel-demo-tests-10` | ads | GET /api/data, ads for a category |
 
 The tests only talk to the demo over HTTP, through its frontend proxy. They need nothing from the demo's source.
 
